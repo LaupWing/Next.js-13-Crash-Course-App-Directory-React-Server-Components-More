@@ -1,6 +1,5 @@
 
 async function fetchRepo(name) {
-   console.log(name)
    const response = await fetch(`https://api.github.com/repos/laupwing/${name}}`)
    return await response.json()
 }
