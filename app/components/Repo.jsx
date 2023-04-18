@@ -6,7 +6,6 @@ async function fetchRepo(name) {
 
 const Repo = async ({ name }) => {
    const repo = await fetchRepo(name)
-   console.log(repo)
    return (
       <div>Repo</div>
    )
