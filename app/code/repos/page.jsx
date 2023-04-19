@@ -2,7 +2,11 @@ import Link from "next/link"
 import { FaStar, FaCodeBranch, FaEye } from "react-icons/fa"
 
 async function fetchRepos() {
-   const response = await fetch("https://api.github.com/users/laupwing/repos")
+   const response = await fetch("https://api.github.com/users/laupwing/repos", {
+      next: {
+         revalidate: 60
+      }
+   })
    return await response.json()
 } 
 
